@@ -1,0 +1,550 @@
+/*简单初始化CSS样式*/
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+}
+
+/*导航设置*/
+.header {
+    height: 88px;
+    width: 100%;
+    position: relative;
+}
+
+/*设置导航logo的布局*/
+.header .logo_a {
+    height: 21px;
+    width: 78px;
+    background: url("../images/player_logo.png") no-repeat 0 0;
+    /*margin-top:存在外边距重叠问题。即子元素和父元素的外边距重叠了，外边距等于其最大的值，所以当设置垂直外边距时，不能这样设置*/
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    opacity: 0.5;
+
+}
+
+/*设置鼠标移动到logo的颜色*/
+.header .logo_a:hover {
+    opacity: 1;
+}
+
+/*登录和注册的布局*/
+.header ul {
+    list-style: none;
+    float: right;
+    margin-right: 60px;
+    margin-top: 30px;
+    opacity: 0.5;
+}
+
+/*设置登录和注册字体的字体*/
+.header .font > a {
+    color: white;
+    opacity: 0.5;
+}
+
+/*鼠标移入的效果*/
+.header .font > a:hover {
+    opacity: 1;
+}
+
+/*中间文本区域*/
+.content {
+    height: 500px;
+    width: 100%;
+}
+
+/*中间文本区域的版心*/
+.content > .content_in {
+    width: 1300px;
+    height: 100%;
+    /*版心居中*/
+    margin: 0px auto;
+}
+
+/*版心的左侧歌曲列表*/
+.music {
+    height: 100%;
+    width: 900px;
+    float: left;
+}
+
+/*歌曲的操作横条*/
+.music_bar {
+    width: 100%;
+    height: 60px;
+}
+
+/*歌曲的导航条具体布局*/
+.music_bar > span {
+    margin-top: 7px;
+    margin-left: 8px;
+    display: inline-block;
+    height: 45px;
+    width: 165px;
+    color: white;
+    border: white 1px solid;
+    border-radius: 5px;
+    /*这设置什么意思*/
+    box-sizing: border-box;
+    opacity: 0.5;
+    /*不先设置line-height，而设置text-align: center字体只是左右居中而已，上下不居中*/
+    line-height: 45px;
+    text-align: center;
+}
+
+/*设置歌曲的导航条的图片*/
+.music_bar > span > i {
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+    background: url("../images/icon_sprite.png") no-repeat 0 0;
+    /*微调图片和字体位置*/
+    vertical-align: -5px;
+    margin-right: 5px;
+}
+
+/*切换雪碧图*/
+/*.music_bar > span>i:nth-child(1)和.music_bar > span:nth-child(1) i 的意思相同*/
+.music_bar > span:nth-child(1) i {
+    background-position: -60px -20px;
+}
+
+.music_bar > span:nth-child(2) i {
+    background-position: -20px -20px;
+}
+
+.music_bar > span:nth-child(3) i {
+    background-position: -40px -240px;
+}
+
+.music_bar > span:nth-child(4) i {
+    background-position: -100px -20px;
+}
+
+.music_bar > span:nth-child(5) i {
+    background-position: -40px -300px;
+}
+
+.music_bar > span:hover {
+    opacity: 1;
+}
+
+/*歌曲列表*/
+.music_list {
+    width: 100%;
+    height: 440px;
+    overflow: auto;
+}
+
+/*歌曲列表操作框大体布局*/
+.music_list .music_list_select {
+    width: 900px;
+    height: 50px;
+    color: white;
+    /*opacity: 0.5;*/
+    line-height: 45px;
+    /*不浮动就出现错版现象*/
+    float: left;
+    border: #ff813a 1px solid;
+}
+
+/*歌曲列表操作框仔细布局*/
+/*设置浮动之后，其大小默认被内容撑开*/
+.music_list_select_ul > li {
+    float: left;
+}
+
+.music_list_select_check > span {
+    display: inline-block;
+    width: 50px;
+    height: 100%;
+    text-align: center;
+}
+
+.music_list_select_check > span > i {
+    display: inline-block;
+    border: black 2px solid;
+    /*边框不变大，具体怎么回事也不明白*/
+    box-sizing: border-box;
+    border-radius: 3px;
+    width: 25px;
+    height: 25px;
+    margin-top: 12px;
+}
+
+.music_list_select_number {
+    width: 40px;
+    height: 50px;
+    text-align: center;
+}
+
+/*点击播放之后的序号效果,*/
+.music_list_select_number2 {
+    width: 40px;
+    height: 50px;
+    /*字体透明*/
+    color: transparent;
+    background: url("../images/wave.gif") no-repeat 0 center;
+}
+
+.music_list_select_musicName {
+    width: 500px;
+    height: 50px;
+}
+
+/*设置播放添加下载菜单*/
+.music_list_select_musicName—menu {
+    float: right;
+    margin-top: 5px;
+    margin-right: 40px;
+    /*默认情况不显示*/
+    display: none;
+}
+
+.music_list_select_musicName—menu a {
+    display: inline-block;
+    height: 36px;
+    width: 36px;
+    background: url("../images/icon_list_menu.png") no-repeat 0 0;
+}
+
+.music_list_select_musicName—menu a:nth-child(1) {
+    background-position: -120px 0px;
+}
+
+.music_list_select_musicName—menu a:nth-child(2) {
+    background-position: -120px -80px;
+}
+
+.music_list_select_musicName—menu a:nth-child(3) {
+    background-position: -120px -120px;
+}
+
+.music_list_select_musicName—menu a:nth-child(4) {
+    background-position: -120px -40px;
+}
+
+/*这是js操作的暂停和播放切换的按钮*/
+.player {
+    background-position: -80px -200px !important;
+}
+
+.music_list_select_singer {
+    width: 200px;
+    height: 50px;
+}
+
+.music_list_select_musicTime {
+    height: 50px;
+    width: 110px;
+    text-align: center;
+}
+
+.music_list_select_musicTime > a {
+    float: left;
+    height: 36px;
+    width: 36px;
+    background: url("../images/icon_list_menu.png") no-repeat -120px -160px;
+    margin: 9px 35px;
+    display: none;
+}
+
+/*版心的右侧歌曲图片和歌词*/
+.music_photo {
+    height: 100%;
+    width: 400px;
+    float: left;
+    text-align: center;
+}
+
+/*设置上面*/
+.music_photo_top a {
+    display: inline-block;
+    height: 180px;
+    width: 201px;
+    background: url("../images/album_cover_player.png") no-repeat 0 0;
+}
+
+.music_photo_top a img {
+    float: left;
+}
+
+/*设置中间*/
+.music_photo_center {
+    color: white;
+    margin-top: 30px;
+    line-height: 28px;
+}
+
+.music_photo_center a {
+    color: white;
+}
+
+/*设置下面*/
+.music_photo_bottom {
+    margin-top: 50px;
+    line-height: 35px;
+    color: white;
+    font-weight: bold;
+}
+
+/*页脚区域*/
+.footer {
+    height: 130px;
+    /*若不设置宽高则开启position:absulote时，元素脱离文档流，靠内容撑开高度*/
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+}
+
+/*页脚区域版心*/
+.fooetr_in {
+    width: 1300px;
+    height: 100%;
+    margin: 0px auto;
+}
+
+/*设置a标签得图片*/
+.fooetr_in a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background: url("../images/player.png") no-repeat 0 0;
+    margin-right: 20px;
+}
+
+.fooetr_in .music_pre {
+    width: 19px;
+    height: 20px;
+    background-position: 0px -30px;
+}
+
+
+/*暂停*/
+.fooetr_in .music_play {
+    width: 21px;
+    height: 29px;
+    /*margin-top: 10px;*/
+    vertical-align: -5px;
+    background-position: 0px 0px;
+}
+
+/*播放*/
+.fooetr_in .music_pause {
+    background-position: -30px 0;
+}
+
+.fooetr_in .music_next {
+    width: 19px;
+    height: 20px;
+    background-position: 0 -52px;
+
+}
+
+.fooetr_in .fooetr_in_space {
+    display: inline-block;
+    height: 50px;
+    width: 650px;
+    color: white;
+    position: relative;
+    top: -5px;
+}
+
+.fooetr_in_space .space_top {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+}
+
+.space_top .space_top_left {
+    display: inline-block;
+    width: 200px;
+    height: 30px;
+    float: left;
+}
+
+.space_top .space_top_right {
+    display: inline-block;
+    width: 136px;
+    height: 30px;
+    float: right;
+}
+
+.fooetr_in_space .space_bottom {
+    width: 100%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-top: 5px;
+}
+
+.space_bottom .bottom_bar {
+    width: 70%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    position: relative;
+}
+
+.bottom_bar .bar_dot {
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    left: 455px;
+    top: -4px;
+    background-color: white;
+}
+
+/*播放模式*/
+/*列表循环*/
+.fooetr_in .music_mode {
+    width: 26px;
+    height: 25px;
+    background-position: 0 -205px;
+}
+
+/*顺序播放*/
+.fooetr_in .music_mode—one {
+    width: 23px;
+    height: 20px;
+    background-position: 0 -260px;
+}
+
+/*随机播放*/
+.fooetr_in .music_mode—random {
+    width: 25px;
+    height: 19px;
+    background-position: 0 -74px;
+}
+
+/*单曲循环*/
+.fooetr_in .music_mode_onlyone {
+    width: 26px;
+    height: 25px;
+    background-position: 0 -232px;
+}
+
+.fooetr_in .music_fav {
+    width: 24px;
+    height: 21px;
+    background-position: 0px -96px;
+
+}
+
+.fooetr_in .music_fav_choosed {
+    width: 24px;
+    height: 21px;
+    background-position: -30px -96px;
+}
+
+.fooetr_in .music_down {
+    width: 22px;
+    height: 21px;
+    background-position: 0px -120px;
+
+}
+
+.fooetr_in .music_comment {
+    width: 24px;
+    height: 24px;
+    background-position: 0px -400px;
+
+}
+
+/*纯净模式关闭*/
+.fooetr_in .music_only_off {
+    width: 74px;
+    height: 27px;
+    background-position: 0px -281px;
+}
+
+/*纯净模式开启*/
+.fooetr_in .music_only_on {
+    width: 74px;
+    height: 27px;
+    background-position: 0px -310px;
+}
+
+.music_voice_info {
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+}
+
+/*为什么.music_voice_icon不能进行CSS的定位图片操作*/
+.music_voice_info .music_voice_icon {
+
+    width: 26px;
+    height: 21px;
+    background-position: 0px -144px;
+
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*top: 10px;*/
+}
+
+/*进度条背景*/
+.music_voice_info .music_voice_bar {
+    display: inline-block;
+    height: 4px;
+    width: 160px;
+    /*用rgba才能实现精度条的功能,否则先设置背景，然后设置透明度，子元素设置相同颜色，达不到效果*/
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 15px;
+    left: 30px;
+}
+
+/*进度条*/
+.music_voice_bar .music_voice_line {
+    height: 100%;
+    width: 70%;
+    background-color: #fff;
+    position: relative;
+}
+
+/*进度条的点*/
+.music_voice_line .music_voice_dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: -2px;
+    left: 112px;
+}
+
+/*歌曲切换后的背景*/
+.background {
+    /*不设置绝对定位，无法显示*/
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: url("../images/lnj.jpg") no-repeat 0 0;
+    /*下面都要看*/
+    background-size: cover;
+    z-index: -2;
+    filter: blur(100px);
+}
+
+.background2 {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+/*自定义滚动条的宽度*/
+._mCS_1 .mCSB_scrollTools .mCSB_dragger_bar {
+    width: 5px;
+}

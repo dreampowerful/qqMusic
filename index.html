@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QQ音乐播放器</title>
+    <script src="js/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="js/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="CSS/index.css">
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+<div class="header">
+    <!--设置logo和登录注册界面-->
+    <a href="#">
+        <div class="logo_a">
+
+        </div>
+    </a>
+
+    <ul class="font">
+        <a href="#">登录&nbsp;</a>
+        <a href="#">注册</a>
+    </ul>
+</div>
+<!--中间区域-->
+<div class="content">
+    <!--版心-->
+    <div class="content_in">
+
+        <div class="music">
+            <!--版心顶部的横条-->
+            <div class="music_bar">
+                <span><i></i>收藏</span>
+                <span><i></i>添加到</span>
+                <span><i></i>下载</span>
+                <span><i></i>删除</span>
+                <span><i></i>清空列表</span>
+            </div>
+            <div class="music_list" data-mcs-theme="light-thick">
+                <ul class="appends">
+                    <div class="music_list_select">
+                        <ul class="music_list_select_ul">
+                            <!--i是选择框的操作-->
+                            <li class="music_list_select_check"><span><i></i></span></li>
+                            <!--歌曲序号-->
+                            <li class="music_list_select_number"></li>
+                            <li class="music_list_select_musicName">歌曲</li>
+                            <li class="music_list_select_singer">歌手</li>
+                            <li class="music_list_select_musicTime">时长</li>
+                        </ul>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div class="music_photo">
+            <div class="music_photo_top">
+                <a href="javaScript:;">
+                    <img src="images/lnj.jpg"/>
+                </a>
+            </div>
+            <div class="music_photo_center">
+                <ul>
+                    <li class="music_name">歌曲名称: <a href="javaScript:;">黄河大道中</a></li>
+                    <li class="singer_Name">歌手名: <a href="javaScript:;">苏大屌</a></li>
+                    <li class="album—Name">专辑名: <a href="javaScript:;">越听越经典</a></li>
+                </ul>
+            </div>
+            <div class="music_photo_bottom">
+                <ul>
+                    <li>第一条歌词</li>
+                    <li>第二条歌词</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="fooetr_in">
+        <a href="javascript:;" class="music_pre" title="上一首"></a>
+        <!--播放暂停只需要删除对应的类就可以实现-->
+        <a href="javascript:;" class="music_play" title="播放"></a>
+        <a href="javascript:;" class="music_next" title="下一首"></a>
+        <div class="fooetr_in_space">
+            <div class="space_top">
+                <span class="space_top_left">黄河大道中/苏大吊</span>
+                <span class="space_top_right">00:00/04:00</span>
+            </div>
+            <div class="space_bottom">
+                <div class="bottom_bar">
+                    <div class="bar_dot"></div>
+                </div>
+            </div>
+        </div>
+        <a href="javascript:;" class="music_mode"></a>
+        <!--表示想同的样式时，后面的类会覆盖前面的类-->
+        <a href="javascript:;" class="music_fav music_fav_choosed"></a>
+        <a href="javascript:;" class="music_down"></a>
+        <a href="javascript:;" class="music_comment"></a>
+        <a href="javascript:;" class="music_only_off music_only_on"></a>
+        <div class="music_voice_info">
+            <a href="javascript:;" class="music_voice_icon"></a>
+            <div class="music_voice_bar">
+                <div class="music_voice_line">
+                    <div class="music_voice_dot"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--设置切换歌曲后改变的背景图-->
+<div class="background"></div>
+<!--让页面能显示-->
+<div class="background2"></div>
+<!--歌曲库-->
+<audio src=""></audio>
+</body>
+</html>
